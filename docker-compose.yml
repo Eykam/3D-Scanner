@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+  3d_scanner_server:
+    image: scanner-server
+    container_name: scanner-server-container
+    build:
+      context: ./dist
+      dockerfile: ./Dockerfile
+    ports:
+      - "8035:8035/udp"
+      - 8036:8036
+    volumes:
+      - ./dist:/app/
+    command: /app/3d_scanner
+    networks:
+      - scanner-network
+
+networks:
+  scanner-network:
+    driver: bridge
