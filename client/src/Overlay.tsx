@@ -34,14 +34,14 @@ export default function Overlay() {
   };
 
   const getStatusColor = (status: Status) => {
-    switch (status) {
-      case "Initializing":
+    switch (true) {
+      case status == "Initializing":
         return "bg-yellow-500";
-      case "Ready" || "Done":
+      case status == "Ready" || status == "Done":
         return "bg-green-500";
-      case "Offline":
+      case status == "Offline":
         return "bg-red-500";
-      case "Scanning":
+      case status == "Scanning":
         return "bg-blue-500";
       default:
         return "bg-gray-500";
