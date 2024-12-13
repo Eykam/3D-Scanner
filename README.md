@@ -2,6 +2,8 @@
 
 This repository contains the source code for a complete 3D LiDAR scanning solution. The system combines an ESP32-based firmware to control a LiDAR sensor and stepper motors, a backend server to aggregate scan data and provide a simple HTTP/JSON API, and a browser-based front-end client to visualize the resulting 3D point cloud in real-time. Additionally, the web client provides basic controls to start, pause, and reset scans.
 
+![alt text](https://github.com/Eykam/3D-Scanner/blob/main/assets/hero.png)
+
 ## Overview
 
 **Key Components:**
